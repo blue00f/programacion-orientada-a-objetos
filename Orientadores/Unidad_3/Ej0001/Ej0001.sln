@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ej0001", "Ej0001\Ej0001.csproj", "{63B12FB9-DEF5-4B78-9BD4-CC59983DCA38}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GarbageCollectorGeneration", "Z:\Orientadores POO DIS\C#\Unidad 3\Ej0001\GarbageCollectorGeneration\GarbageCollectorGeneration.vbproj", "{5806CB90-7C8E-4B90-BB4A-29E41186C6CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63B12FB9-DEF5-4B78-9BD4-CC59983DCA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B12FB9-DEF5-4B78-9BD4-CC59983DCA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B12FB9-DEF5-4B78-9BD4-CC59983DCA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B12FB9-DEF5-4B78-9BD4-CC59983DCA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5806CB90-7C8E-4B90-BB4A-29E41186C6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5806CB90-7C8E-4B90-BB4A-29E41186C6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5806CB90-7C8E-4B90-BB4A-29E41186C6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5806CB90-7C8E-4B90-BB4A-29E41186C6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5965C678-7846-4A20-B316-729A473C1BD9}
+	EndGlobalSection
+EndGlobal
