@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionBanco", "GestionBanco\GestionBanco.csproj", "{33790D64-380F-4876-A903-14DAC5FEA6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventoEstatico", "EventoEstatico\EventoEstatico.csproj", "{7BF1E221-6AA7-4D2D-A094-A5D81E8ED8A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{33790D64-380F-4876-A903-14DAC5FEA6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33790D64-380F-4876-A903-14DAC5FEA6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33790D64-380F-4876-A903-14DAC5FEA6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BF1E221-6AA7-4D2D-A094-A5D81E8ED8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BF1E221-6AA7-4D2D-A094-A5D81E8ED8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BF1E221-6AA7-4D2D-A094-A5D81E8ED8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BF1E221-6AA7-4D2D-A094-A5D81E8ED8A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
