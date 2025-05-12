@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo_04", "Ejemplo_04\Ej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo_05_Banco", "Ejemplo_05_Banco\Ejemplo_05_Banco.csproj", "{4333CF8E-8A1F-BD3A-8E1D-E79B1EFF168E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo_06", "Ejemplo_06\Ejemplo_06.csproj", "{603F1C7D-CF80-481E-AE1A-190DB513F0AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo_07", "Ejemplo_07\Ejemplo_07.csproj", "{9D712E13-936C-458C-86EE-98A1C4E6F5E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4333CF8E-8A1F-BD3A-8E1D-E79B1EFF168E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4333CF8E-8A1F-BD3A-8E1D-E79B1EFF168E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4333CF8E-8A1F-BD3A-8E1D-E79B1EFF168E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603F1C7D-CF80-481E-AE1A-190DB513F0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603F1C7D-CF80-481E-AE1A-190DB513F0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603F1C7D-CF80-481E-AE1A-190DB513F0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603F1C7D-CF80-481E-AE1A-190DB513F0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D712E13-936C-458C-86EE-98A1C4E6F5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D712E13-936C-458C-86EE-98A1C4E6F5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D712E13-936C-458C-86EE-98A1C4E6F5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D712E13-936C-458C-86EE-98A1C4E6F5E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
