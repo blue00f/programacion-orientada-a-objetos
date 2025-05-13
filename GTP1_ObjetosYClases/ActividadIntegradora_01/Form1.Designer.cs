@@ -1,4 +1,4 @@
-﻿namespace ActividadIntegradora1
+﻿namespace ActividadIntegradora_01
 {
     partial class Form1
     {

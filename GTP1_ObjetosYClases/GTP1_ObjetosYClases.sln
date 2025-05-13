@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlDeAlumnos", "Control
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsoDelFinalizador", "UsoDelFinalizador\UsoDelFinalizador.csproj", "{38D87CA8-77AE-4737-848C-A129ABF830E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActividadIntegradora1", "ActividadIntegradora1\ActividadIntegradora1.csproj", "{1ECC6AC4-BFBC-49F6-9771-83CD966CD47A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActividadIntegradora_01", "ActividadIntegradora_01\ActividadIntegradora_01.csproj", "{1ECC6AC4-BFBC-49F6-9771-83CD966CD47A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
 using Microsoft.VisualBasic;
 using System.CodeDom;
 
-namespace ActividadIntegradora1
+namespace ActividadIntegradora_01
 {
     public partial class Form1 : Form
     {
