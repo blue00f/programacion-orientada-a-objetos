@@ -33,24 +33,22 @@
             // 
             // button1
             // 
-            button1.Location = new Point(64, 64);
-            button1.Margin = new Padding(2, 1, 2, 1);
+            button1.Location = new Point(180, 98);
             button1.Name = "button1";
-            button1.Size = new Size(167, 25);
+            button1.Size = new Size(310, 53);
             button1.TabIndex = 0;
-            button1.Text = "Ingresar valor";
+            button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(313, 158);
+            ClientSize = new Size(1572, 587);
             Controls.Add(button1);
-            Margin = new Padding(2, 1, 2, 1);
             Name = "Form1";
-            Text = "Uso de TRY-CATCH-FINALLY";
+            Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
         }
