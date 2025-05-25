@@ -324,7 +324,9 @@ namespace ActividadIntegradora_02
                 Accion accion = new Accion(accionVieja.Codigo, denominacion, cotizacionActual, cantidadEmitida);
                 bolsa.ModificarAccion(accion);
                 Mostrar(grillaAcciones, bolsa.ObtenerAcciones());
-                if (grillaAcciones.Rows.Count > 1) Mostrar(grillaAccionesDelInversor, ConvertirAnonimoAInversor(grillaInversores));
+
+                var inversor = ConvertirAnonimoAInversor(grillaInversores);
+                Mostrar(grillaAccionesDelInversor, bolsa.ObtenerAccionesDelInversor(inversor));
                 MostrarOrdenamientoGrillas();
             }
             catch (NoEsNumericoException ex)

@@ -8,19 +8,16 @@ using System.Threading.Tasks;
 
 namespace ActividadIntegradora_02.Entidades
 {
-    internal class Bolsa
+    internal class Bolsa : IDisposable
     {
         public event EventHandler<CambioCotizacionEventArgs> CambioCotizacion;
         List<Inversor> inversores;
         List<Accion> acciones;
+        private bool disposed = false;
         public Bolsa()
         {
             inversores = new List<Inversor>();
             acciones = new List<Accion>();
-        }
-        ~Bolsa()
-        {
-            MessageBox.Show("GC liberó los recursos de bolsa!");
         }
 
         public void AgregarInversor(Inversor pInversor) => inversores.Add(pInversor.CloneTipado());
@@ -125,6 +122,30 @@ namespace ActividadIntegradora_02.Entidades
             var inversor = inversores.Find(x => x.Dni == pDni);
             if (inversor == null) rdo = true;
             return rdo;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    MessageBox.Show("Dispose liberó los recursos administrados de Bolsa!");
+                }
+                MessageBox.Show("Dispose liberó los recursos no administrados de Bolsa!");
+                disposed = true;
+            }
+        }
+        ~Bolsa()
+        {
+            Dispose(false);
+            MessageBox.Show("GC liberó los recursos de Bolsa");
         }
     }
 }

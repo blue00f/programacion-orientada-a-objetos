@@ -7,7 +7,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace ActividadIntegradora_02.Entidades
 {
-    internal abstract class Inversor : ICloneable
+    internal abstract class Inversor : ICloneable, IDisposable
     {
         protected List<CompraAccion> acciones;
         private static int legajoIncremental = 1;
@@ -15,6 +15,7 @@ namespace ActividadIntegradora_02.Entidades
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Dni { get; set; }
+        private bool disposed = false;
 
         public Inversor(string pNombre, string pApellido, string pDni)
         {
@@ -23,10 +24,6 @@ namespace ActividadIntegradora_02.Entidades
             Apellido = pApellido;
             Dni = pDni;
             acciones = new List<CompraAccion>();
-        }
-        ~Inversor()
-        {
-            MessageBox.Show("GC liberó los recursos del inversor!");
         }
 
         public bool ComprarAccion(Accion pAccion, int pCantidad, List<Inversor> pInversores)
@@ -83,8 +80,6 @@ namespace ActividadIntegradora_02.Entidades
         }
         public object Clone() => this.MemberwiseClone();
         public Inversor CloneTipado() => (Inversor)this.Clone();
-
-
         internal class InversorASC : IComparer<Inversor>
         {
             public int Compare(Inversor x, Inversor y)
@@ -99,6 +94,30 @@ namespace ActividadIntegradora_02.Entidades
         internal class InversorDESC : IComparer<Inversor>
         {
             public int Compare(Inversor x, Inversor y) => (new InversorASC()).Compare(x, y) * -1;
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    MessageBox.Show("Dispose liberó los recursos administrados de Inversor!");
+                }
+                MessageBox.Show("Dispose liberó los recursos no administrados de Inversor!");
+
+                disposed = true;
+            }
+        }
+        ~Inversor()
+        {
+            Dispose(false);
+            MessageBox.Show("GC liberó los recursos de Inversor");
         }
     }
 }

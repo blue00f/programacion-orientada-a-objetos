@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace ActividadIntegradora_02.Entidades
 {
-    internal class Accion : ICloneable, IEnumerable<string>
+    internal class Accion : IDisposable, ICloneable, IEnumerable<string>
     {
         public string Codigo { get; set; }
         public string Denominacion { get; set; }
         public decimal CotizacionActual { get; set; }
         public int CantidadEmitida { get; set; }
+        private bool disposed = false;
 
         public Accion(string pCodigo, string pDenominacion, decimal pCotizacionActual, int pCantidadEmitida)
         {
@@ -22,10 +23,8 @@ namespace ActividadIntegradora_02.Entidades
             CotizacionActual = pCotizacionActual;
             CantidadEmitida = pCantidadEmitida;
         }
-        ~Accion()
-        {
-            MessageBox.Show("GC liberó los recursos de acción!");
-        }
+
+
 
         public static bool ValidarCodigo(string pCodigo)
         {
@@ -60,6 +59,29 @@ namespace ActividadIntegradora_02.Entidades
         internal class AccionDESC : IComparer<Accion>
         {
             public int Compare(Accion x, Accion y) => (new AccionASC()).Compare(x, y) * -1;
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    MessageBox.Show("Dispose liberó los recursos administrados de Accion!");
+                }
+                MessageBox.Show("Dispose liberó los recursos no administrados de Accion!");
+                disposed = true;
+            }
+        }
+        ~Accion()
+        {
+            Dispose(false);
+            MessageBox.Show("GC liberó los recursos de CompraAccion");
         }
     }
 }
