@@ -37,9 +37,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(66, 308);
+            button1.Location = new Point(36, 144);
+            button1.Margin = new Padding(2, 1, 2, 1);
             button1.Name = "button1";
-            button1.Size = new Size(150, 46);
+            button1.Size = new Size(81, 22);
             button1.TabIndex = 0;
             button1.Text = "Prueba";
             button1.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(66, 51);
+            button2.Location = new Point(36, 24);
+            button2.Margin = new Padding(2, 1, 2, 1);
             button2.Name = "button2";
-            button2.Size = new Size(150, 46);
+            button2.Size = new Size(81, 22);
             button2.TabIndex = 1;
             button2.Text = "Sumar";
             button2.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // button3
             // 
-            button3.Location = new Point(66, 113);
+            button3.Location = new Point(36, 53);
+            button3.Margin = new Padding(2, 1, 2, 1);
             button3.Name = "button3";
-            button3.Size = new Size(150, 46);
+            button3.Size = new Size(81, 22);
             button3.TabIndex = 2;
             button3.Text = "Restar";
             button3.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // button4
             // 
-            button4.Location = new Point(66, 176);
+            button4.Location = new Point(36, 82);
+            button4.Margin = new Padding(2, 1, 2, 1);
             button4.Name = "button4";
-            button4.Size = new Size(150, 46);
+            button4.Size = new Size(81, 22);
             button4.TabIndex = 3;
             button4.Text = "Multiplicar";
             button4.UseVisualStyleBackColor = true;
@@ -77,9 +81,10 @@
             // 
             // button5
             // 
-            button5.Location = new Point(315, 51);
+            button5.Location = new Point(170, 24);
+            button5.Margin = new Padding(2, 1, 2, 1);
             button5.Name = "button5";
-            button5.Size = new Size(268, 46);
+            button5.Size = new Size(144, 22);
             button5.TabIndex = 4;
             button5.Text = "Todas las Operaciones";
             button5.UseVisualStyleBackColor = true;
@@ -87,14 +92,15 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(366, 211);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
