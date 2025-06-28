@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_ICloneable", "Eje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_IEnumerable", "Ejercicio_IEnumerable\Ejercicio_IEnumerable.csproj", "{92236D52-5D37-4BF8-A2B3-A03FDA14FC40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActividadIntegradora_03", "ActividadIntegradora_03\ActividadIntegradora_03.csproj", "{F1F2A0AB-86FC-423E-ACF8-BF1C9B7BD4CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{92236D52-5D37-4BF8-A2B3-A03FDA14FC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92236D52-5D37-4BF8-A2B3-A03FDA14FC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92236D52-5D37-4BF8-A2B3-A03FDA14FC40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F2A0AB-86FC-423E-ACF8-BF1C9B7BD4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F2A0AB-86FC-423E-ACF8-BF1C9B7BD4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F2A0AB-86FC-423E-ACF8-BF1C9B7BD4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F2A0AB-86FC-423E-ACF8-BF1C9B7BD4CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
