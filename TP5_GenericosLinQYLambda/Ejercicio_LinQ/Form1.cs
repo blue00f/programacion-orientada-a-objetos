@@ -32,10 +32,11 @@ namespace Ejemplo1
 
             foreach (var c in this.Controls)
             {
-                if (c is DataGridView)
+                if (c is DataGridView grilla)
                 {
-                    ((DataGridView)c).MultiSelect = false;
-                    ((DataGridView)c).SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    grilla.MultiSelect = false;
+                    grilla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    grilla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 }
             }
 

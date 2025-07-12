@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Generics
 {
-    internal class Vendedor
+    internal class Vendedor : ICloneable, ICloneableTipado<Vendedor>
     {
         public string Legajo { get; set; }
         public string Nombre { get; set; }
@@ -18,5 +18,8 @@ namespace Ejercicio_Generics
             Nombre = pNombre;
             Apellido = pApellido;
         }
+
+        public object Clone() => this.MemberwiseClone();
+        public Vendedor? CloneTipado() => this.Clone() as Vendedor;
     }
 }

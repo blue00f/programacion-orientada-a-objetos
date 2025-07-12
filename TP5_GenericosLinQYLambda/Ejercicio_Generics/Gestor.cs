@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Generics
 {
-    internal class Gestor<T>
+    internal class Gestor<T> where T : class, ICloneableTipado<T>
     {
         private List<T> items;
         public Gestor()
@@ -18,9 +18,9 @@ namespace Ejercicio_Generics
         public List<T> ObtenerItems()
         {
             List<T> itemsAux = new List<T>();
-            foreach (T itemAux in items)
+            foreach (T i in items)
             {
-                itemsAux.Add(itemAux);
+                itemsAux.Add(i.CloneTipado());
             }
             return itemsAux;
         }
