@@ -40,7 +40,7 @@
             grillaPlaylist.AllowUserToAddRows = false;
             grillaPlaylist.AllowUserToDeleteRows = false;
             grillaPlaylist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grillaPlaylist.Location = new Point(58, 73);
+            grillaPlaylist.Location = new Point(32, 53);
             grillaPlaylist.Name = "grillaPlaylist";
             grillaPlaylist.ReadOnly = true;
             grillaPlaylist.Size = new Size(417, 215);
@@ -48,7 +48,7 @@
             // 
             // btnAgregarCancion
             // 
-            btnAgregarCancion.Location = new Point(58, 294);
+            btnAgregarCancion.Location = new Point(32, 274);
             btnAgregarCancion.Name = "btnAgregarCancion";
             btnAgregarCancion.Size = new Size(181, 23);
             btnAgregarCancion.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // btnRecorrerPlaylist
             // 
-            btnRecorrerPlaylist.Location = new Point(294, 294);
+            btnRecorrerPlaylist.Location = new Point(268, 274);
             btnRecorrerPlaylist.Name = "btnRecorrerPlaylist";
             btnRecorrerPlaylist.Size = new Size(181, 23);
             btnRecorrerPlaylist.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(58, 46);
+            label1.Location = new Point(32, 26);
             label1.Name = "label1";
             label1.Size = new Size(74, 25);
             label1.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(553, 372);
+            ClientSize = new Size(479, 328);
             Controls.Add(label1);
             Controls.Add(btnRecorrerPlaylist);
             Controls.Add(btnAgregarCancion);

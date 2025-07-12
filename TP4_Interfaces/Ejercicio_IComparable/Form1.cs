@@ -22,6 +22,7 @@ namespace WinFormsApp1
 
             grillaPersonas.DataSource = null;
             grillaPersonas.DataSource = personas;
+            grillaPersonas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnOrdenar_Click(object sender, EventArgs e)
