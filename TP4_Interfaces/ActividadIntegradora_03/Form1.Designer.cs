@@ -41,7 +41,6 @@
             label5 = new Label();
             grillaPrecioDesc = new DataGridView();
             grillaPrecioAsc = new DataGridView();
-            btnOrdenarGrillas = new Button();
             txtDescripcionClon = new TextBox();
             btnModificarClon = new Button();
             btnClonarDeLaGrilla = new Button();
@@ -65,6 +64,7 @@
             grillaProductos.ReadOnly = true;
             grillaProductos.Size = new Size(736, 205);
             grillaProductos.TabIndex = 0;
+            grillaProductos.RowEnter += grillaProductos_RowEnter;
             // 
             // label1
             // 
@@ -78,7 +78,7 @@
             // 
             // btnAgregarProducto
             // 
-            btnAgregarProducto.Location = new Point(34, 256);
+            btnAgregarProducto.Location = new Point(153, 256);
             btnAgregarProducto.Name = "btnAgregarProducto";
             btnAgregarProducto.Size = new Size(104, 41);
             btnAgregarProducto.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             // btnBorrarProducto
             // 
-            btnBorrarProducto.Location = new Point(160, 256);
+            btnBorrarProducto.Location = new Point(279, 256);
             btnBorrarProducto.Name = "btnBorrarProducto";
             btnBorrarProducto.Size = new Size(104, 41);
             btnBorrarProducto.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             // btnModificarProducto
             // 
-            btnModificarProducto.Location = new Point(286, 256);
+            btnModificarProducto.Location = new Point(405, 256);
             btnModificarProducto.Name = "btnModificarProducto";
             btnModificarProducto.Size = new Size(104, 41);
             btnModificarProducto.TabIndex = 4;
@@ -190,19 +190,9 @@
             grillaPrecioAsc.Size = new Size(626, 181);
             grillaPrecioAsc.TabIndex = 9;
             // 
-            // btnOrdenarGrillas
-            // 
-            btnOrdenarGrillas.Location = new Point(409, 256);
-            btnOrdenarGrillas.Name = "btnOrdenarGrillas";
-            btnOrdenarGrillas.Size = new Size(104, 41);
-            btnOrdenarGrillas.TabIndex = 13;
-            btnOrdenarGrillas.Text = "Ordenar";
-            btnOrdenarGrillas.UseVisualStyleBackColor = true;
-            btnOrdenarGrillas.Click += btnOrdenarGrillas_Click;
-            // 
             // txtDescripcionClon
             // 
-            txtDescripcionClon.Location = new Point(877, 108);
+            txtDescripcionClon.Location = new Point(786, 108);
             txtDescripcionClon.Name = "txtDescripcionClon";
             txtDescripcionClon.ReadOnly = true;
             txtDescripcionClon.Size = new Size(90, 23);
@@ -210,7 +200,7 @@
             // 
             // btnModificarClon
             // 
-            btnModificarClon.Location = new Point(877, 137);
+            btnModificarClon.Location = new Point(786, 137);
             btnModificarClon.Name = "btnModificarClon";
             btnModificarClon.Size = new Size(302, 23);
             btnModificarClon.TabIndex = 15;
@@ -220,9 +210,9 @@
             // 
             // btnClonarDeLaGrilla
             // 
-            btnClonarDeLaGrilla.Location = new Point(538, 256);
+            btnClonarDeLaGrilla.Location = new Point(786, 45);
             btnClonarDeLaGrilla.Name = "btnClonarDeLaGrilla";
-            btnClonarDeLaGrilla.Size = new Size(104, 41);
+            btnClonarDeLaGrilla.Size = new Size(302, 41);
             btnClonarDeLaGrilla.TabIndex = 16;
             btnClonarDeLaGrilla.Text = "Clonar registro";
             btnClonarDeLaGrilla.UseVisualStyleBackColor = true;
@@ -230,7 +220,7 @@
             // 
             // txtPrecioClon
             // 
-            txtPrecioClon.Location = new Point(984, 108);
+            txtPrecioClon.Location = new Point(893, 108);
             txtPrecioClon.Name = "txtPrecioClon";
             txtPrecioClon.ReadOnly = true;
             txtPrecioClon.Size = new Size(90, 23);
@@ -238,7 +228,7 @@
             // 
             // txtStockClon
             // 
-            txtStockClon.Location = new Point(1089, 108);
+            txtStockClon.Location = new Point(998, 108);
             txtStockClon.Name = "txtStockClon";
             txtStockClon.ReadOnly = true;
             txtStockClon.Size = new Size(90, 23);
@@ -246,7 +236,7 @@
             // 
             // btnIterarId
             // 
-            btnIterarId.Location = new Point(666, 256);
+            btnIterarId.Location = new Point(536, 256);
             btnIterarId.Name = "btnIterarId";
             btnIterarId.Size = new Size(104, 41);
             btnIterarId.TabIndex = 19;
@@ -258,14 +248,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1406, 798);
+            ClientSize = new Size(1390, 798);
             Controls.Add(btnIterarId);
             Controls.Add(txtStockClon);
             Controls.Add(txtPrecioClon);
             Controls.Add(btnClonarDeLaGrilla);
             Controls.Add(btnModificarClon);
             Controls.Add(txtDescripcionClon);
-            Controls.Add(btnOrdenarGrillas);
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(grillaPrecioDesc);
@@ -306,7 +295,6 @@
         private Label label5;
         private DataGridView grillaPrecioDesc;
         private DataGridView grillaPrecioAsc;
-        private Button btnOrdenarGrillas;
         private TextBox txtDescripcionClon;
         private Button btnModificarClon;
         private Button btnClonarDeLaGrilla;

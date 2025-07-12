@@ -26,7 +26,7 @@ namespace ActividadIntegradora_03.Entidades
 
         public IEnumerator GetEnumerator()
         {
-            return new ProductoEnumerator(this.Id);
+            return new ProductoEnumerator(this);
         }
 
         internal class IdASC : IComparer<Producto>

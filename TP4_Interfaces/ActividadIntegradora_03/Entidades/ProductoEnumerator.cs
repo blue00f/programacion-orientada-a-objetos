@@ -11,9 +11,9 @@ namespace ActividadIntegradora_03.Entidades
     {
         private string[] partes;
         private int pos = -1;
-        public ProductoEnumerator(string pId)
+        public ProductoEnumerator(Producto pProducto)
         {
-            partes = pId.Split("-");
+            partes = pProducto.Id.Split("-");
         }
         public object Current => partes[pos];
 

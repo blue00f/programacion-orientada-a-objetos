@@ -31,6 +31,10 @@ namespace ActividadIntegradora_03
             pGrilla.DataSource = null;
             pGrilla.DataSource = pDatos;
         }
+        private void ActualizarGrillas(DataGridView pGrilla, object pDatos)
+        {
+            Mostrar(pGrilla, pDatos);
+        }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
@@ -70,6 +74,7 @@ namespace ActividadIntegradora_03
                 var producto = grillaProductos.SelectedRows[0].DataBoundItem as Producto;
                 productos.BorrarProducto(producto);
                 Mostrar(grillaProductos, productos.ObtenerProductos());
+                ActualizarGrillas();
             }
             catch (Exception ex)
             {
@@ -98,29 +103,6 @@ namespace ActividadIntegradora_03
                 Producto productoNuevo = new(productoViejo.Id, descripcion, precio, stock);
                 productos.ModificarProducto(productoNuevo);
                 Mostrar(grillaProductos, productos.ObtenerProductos());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnOrdenarGrillas_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (grillaProductos.Rows.Count == 0) throw new Exception("No hay registros de producto!");
-                var p1 = productos.ObtenerProductos();
-                p1.Sort(new Producto.IdASC()); Mostrar(grillaIdAsc, p1);
-
-                var p2 = productos.ObtenerProductos();
-                p2.Sort(new Producto.IdDESC()); Mostrar(grillaIdDesc, p2);
-
-                var p3 = productos.ObtenerProductos();
-                p3.Sort(new Producto.PrecioASC()); Mostrar(grillaPrecioAsc, p3);
-
-                var p4 = productos.ObtenerProductos();
-                p4.Sort(new Producto.PrecioDESC()); Mostrar(grillaPrecioDesc, p4);
             }
             catch (Exception ex)
             {
@@ -165,21 +147,61 @@ namespace ActividadIntegradora_03
             }
         }
 
+
+        string[] leyenda = { "Código de producto", "Número de línea", "Código de operador", "Fecha de fabricación" };
         private void btnIterarId_Click(object sender, EventArgs e)
         {
             try
             {
                 if (grillaProductos.Rows.Count == 0) throw new Exception("No hay registros de producto!");
                 var producto = grillaProductos.SelectedRows[0].DataBoundItem as Producto;
+                int i = 0;
                 foreach (var parte in producto)
                 {
-                    MessageBox.Show(parte.ToString());
+                    MessageBox.Show(parte.ToString(), leyenda[i], MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    i++;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void grillaProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (grillaProductos.Rows.Count == 0) throw new Exception("No hay registros de producto!");
+
+                ActualizarGrillas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ActualizarGrillas()
+        {
+            if (productos.ObtenerProductos().Count == 0)
+            {
+                grillaPrecioAsc.DataSource = null;
+                grillaPrecioDesc.DataSource = null;
+                grillaIdAsc.DataSource = null;
+                grillaIdDesc.DataSource = null;
+            }
+            var p1 = productos.ObtenerProductos();
+            p1.Sort(new Producto.IdASC()); Mostrar(grillaIdAsc, p1);
+
+            var p2 = productos.ObtenerProductos();
+            p2.Sort(new Producto.IdDESC()); Mostrar(grillaIdDesc, p2);
+
+            var p3 = productos.ObtenerProductos();
+            p3.Sort(new Producto.PrecioASC()); Mostrar(grillaPrecioAsc, p3);
+
+            var p4 = productos.ObtenerProductos();
+            p4.Sort(new Producto.PrecioDESC()); Mostrar(grillaPrecioDesc, p4);
         }
     }
 }
