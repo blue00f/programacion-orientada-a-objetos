@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "EjecutarChat",
+    "Projects": [
+      {
+        "Path": "Ejercicio_Servidor\\Ejercicio_Servidor.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Ejercicio_Cliente\\Ejercicio_Cliente.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
