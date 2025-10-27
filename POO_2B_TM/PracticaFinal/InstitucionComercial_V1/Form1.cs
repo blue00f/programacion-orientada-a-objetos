@@ -1,7 +1,7 @@
-using Ejercicio01.Entidades;
+using InstitucionComercial_V1.Entidades;
 using Microsoft.VisualBasic;
 
-namespace Ejercicio01
+namespace InstitucionComercial_V1
 {
     public partial class Form1 : Form
     {

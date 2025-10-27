@@ -1,4 +1,4 @@
-namespace Ejercicio01
+namespace InstitucionComercial_V2
 {
     internal static class Program
     {

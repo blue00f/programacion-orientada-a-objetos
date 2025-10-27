@@ -1,7 +1,7 @@
-using InstitucionComercial.Entidades;
+using InstitucionComercial_V2.Entidades;
 using Microsoft.VisualBasic;
 
-namespace InstitucionComercial
+namespace InstitucionComercial_V2
 {
     public partial class Form1 : Form
     {

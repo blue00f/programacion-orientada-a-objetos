@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio01.Entidades
+﻿namespace InstitucionComercial_V1.Entidades
 {
     internal abstract class Cobro : ICloneable
     {

@@ -1,4 +1,4 @@
-﻿namespace Ejercicio01
+﻿namespace InstitucionComercial_V1
 {
     partial class Form1
     {
